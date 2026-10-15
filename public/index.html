@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>QuizMaster | Online Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Quiz<span>Master.</span></div>
+    <div class="tag">STUDENT EDITION</div>
+  </header>
+
+  <main class="container">
+    <section id="welcome" class="card welcome">
+      <div class="badge">✦ TEST YOUR KNOWLEDGE</div>
+      <h1>Challenge Your<br><span>Knowledge.</span></h1>
+      <p>Think smart. Choose wisely. See how much you know!</p>
+      <div class="stats">
+        <div><strong>10</strong><small>Questions</small></div>
+        <div><strong>4</strong><small>Options each</small></div>
+        <div><strong>100%</strong><small>Your effort</small></div>
+      </div>
+      <button id="startBtn" class="primary">Start Quiz <span>→</span></button>
+      <p class="note">No pressure. Just learning.</p>
+    </section>
+
+    <section id="quiz" class="card hidden" aria-live="polite">
+      <div class="quiz-top">
+        <span class="badge">KNOWLEDGE CHECK</span>
+        <span id="counter">QUESTION 1 / 10</span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h2 id="questionText">Loading question...</h2>
+      <div id="options" class="options"></div>
+      <div class="quiz-bottom">
+        <span id="answered">0 of 10 answered</span>
+        <button id="nextBtn" class="primary">Next Question →</button>
+      </div>
+    </section>
+
+    <section id="result" class="card welcome hidden">
+      <div class="badge">✦ QUIZ COMPLETED</div>
+      <div class="trophy" aria-hidden="true">🏆</div>
+      <h1 id="resultTitle">Well Done!</h1>
+      <p id="resultMessage">You have completed the quiz.</p>
+      <div class="score-circle">
+        <strong id="score">0/10</strong>
+        <span id="percentage">0%</span>
+      </div>
+      <button id="restartBtn" class="primary">Try Again ↻</button>
+      <p class="note">Keep learning. Keep growing.</p>
+    </section>
+
+    <p id="error" class="error hidden" role="alert"></p>
+  </main>
+
+  <footer>© 2026 QuizMaster · Made for curious minds</footer>
+</body>
+</html>
